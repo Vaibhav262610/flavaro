@@ -23,18 +23,24 @@ const Cart = () => {
             className="border-2 border-gray-600 text-gray-600 font-bold p-1 text-2xl rounded-md hover:text-red-700 hover:border-red-700 cursor-pointer"
           />
         </div>
-        {cartItems.map((food) => {
-          return (
-            <CardItem
-              key={food.id}
-              id={food.id}
-              name={food.name}
-              price={food.price}
-              img={food.img}
-              qty={food.qty}
-            />
-          );
-        })}
+        {cartItems.length > 0 ? (
+          cartItems.map((food) => {
+            return (
+              <CardItem
+                key={food.id}
+                id={food.id}
+                name={food.name}
+                price={food.price}
+                img={food.img}
+                qty={food.qty}
+              />
+            );
+          })
+        ) : (
+          <h1 className="text-xl font-semibold text-red-600 my-5">
+            Your Cart is Empty ☹️
+          </h1>
+        )}
         <div className="absolute bottom-0">
           <h3 className="font-semibold text-gray-800 text-lg">Items : </h3>
           <h3 className="font-semibold text-gray-800 text-lg">
@@ -48,7 +54,7 @@ const Cart = () => {
       </div>
       <FaShoppingCart
         onClick={() => setActiveCart(!activeCart)}
-        className=" rounded-full bg-white shadow-md text-5xl p-3 bottom-10 fixed cursor-pointer hover:animate-bounce right-10"
+        className=" rounded-full bg-white shadow-md text-5xl p-3 bottom-10 fixed cursor-pointer  right-10"
       />
     </>
   );
