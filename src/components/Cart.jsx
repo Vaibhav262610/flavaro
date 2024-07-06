@@ -42,9 +42,9 @@ const Cart = () => {
           </h1>
         )}
         <div className="absolute bottom-0">
-          <h3 className="font-semibold text-gray-800 text-lg">Items : </h3>
+          <h3 className="font-semibold text-gray-800 text-lg">Items :  </h3>
           <h3 className="font-semibold text-gray-800 text-lg">
-            Total Amount :{" "}
+            Total Amount :
           </h3>
           <hr className="lg:w-[18vw] w-[90vw] my-2" />
           <button className="bg-green-500 mb-5 font-bold px-3 py-2 text-white rounded w-[90vw] lg:w-[18vw]">

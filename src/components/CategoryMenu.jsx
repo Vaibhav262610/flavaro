@@ -12,6 +12,7 @@ const CategoryMenu = () => {
             <button className="px-3 py-2 bg-gray-200 font-bold rounded-lg hover:text-white  hover:bg-green-500 ">Dinner</button>
             <button className="px-3 py-2 bg-gray-200 font-bold rounded-lg hover:text-white  hover:bg-green-500 ">Snacks</button>
         </div>
+        
       </div>
     </>
   );
